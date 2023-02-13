@@ -13,8 +13,10 @@ def general_info(df):
     """
     print(df.info())
     print('*' * 50)
-    print('Missing Values')
-    print(df.isna().sum())
+    
+    isna_df = df.isna().sum().to_frame(name='missing_value')
+    isna_df['percent_missing'] = round(100 * (isna_df['missing_value']/sum(isna_df['missing_value'])),2)
+    return isna_df
 
 ### Get Columns ###
     
