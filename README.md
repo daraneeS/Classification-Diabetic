@@ -22,6 +22,3 @@ hist_plot_pd(df[to_log])
 ```
 ![png](images/log_transform.png)
 
-
-![png](images/log_transform.png)
-
